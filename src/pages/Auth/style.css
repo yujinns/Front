@@ -1,0 +1,34 @@
+#auth {
+  width: 100%;
+  height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  width: 500px;
+}
+
+.auth-card-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(25,26,30, 1);
+  border-radius: 10px;
+  width: 100%;
+  height: auth;
+}
+
+.auth-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  margin: 50px 0;
+}
+
+.auth-card-input-box {
+  width: 300px;
+  column-gap: 40px;
+  margin-bottom: 10px;
+}
