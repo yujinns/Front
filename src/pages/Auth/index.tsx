@@ -493,6 +493,3 @@ export default function Auth() {
     </div>
   );
 }
-function setEmail(rememberedEmail: string) {
-  throw new Error("Function not implemented.");
-}
