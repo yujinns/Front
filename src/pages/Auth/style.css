@@ -14,10 +14,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(25,26,30, 1);
+  background: rgba(25, 26, 30, 1);
   border-radius: 10px;
   width: 100%;
-  height: auth;
+  height: auto;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
 .auth-card-title {
@@ -30,5 +31,54 @@
 .auth-card-input-box {
   width: 300px;
   column-gap: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+}
+
+.auth-sign-in-error-box {
+  margin-bottom: -4px;
+}
+
+.auth-sign-in-error-message {
+  color: rgba(255, 0, 0, 0.7);
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%;
+
+  white-space: pre-wrap;
+}
+
+.auth-sign-in-remember-id {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.auth-card-input-box .blue-large-full-button {
+  margin-top: 40px;
+  border-radius: 3px;
+}
+
+.auth-description-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-description {
+  color: rgba(220, 222, 223, 0.7);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.auth-description-link {
+  color: rgba(220, 222, 223, 1);
+  cursor: pointer;
+  font-weight: 600;
 }

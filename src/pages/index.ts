@@ -1,4 +1,6 @@
+import Auth from "./Auth";
 import Main from "./Main";
 
 
-export { Main };
+export { Auth, Main };
+
