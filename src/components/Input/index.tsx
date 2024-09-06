@@ -1,6 +1,6 @@
 import { ChangeEvent, KeyboardEvent, forwardRef } from "react";
 import { IoSearchSharp } from "react-icons/io5";
-import './style.css';
+import "./style.css";
 
 // interface: Input 컴포넌트 //
 interface Props {
@@ -35,9 +35,7 @@ const Input = forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
   return (
     <div className="input">
       <div className="input-label">{label}</div>
-      <div
-        className={error ? "input-container-error" : "input-container"}
-      >
+      <div className={error ? "input-container-error" : "input-container"}>
         <input
           className="input"
           type={type}
@@ -53,9 +51,7 @@ const Input = forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
           </div>
         )}
       </div>
-      {message !== undefined && (
-        <div className="inputbox-message">{message}</div>
-      )}
+      {message !== undefined && <div className="input-message">{message}</div>}
     </div>
   );
 });
@@ -67,19 +63,24 @@ interface searchProps {
 }
 
 const SearchInput = (props: searchProps) => {
+  const { onButtonClick, className, size } = props;
 
-  const {onButtonClick, className, size} = props;
-  
   return (
     <div id="searchInput">
-      <input type="text"className={className} placeholder="검색어를 입력하세요." />
+      <select name="searchSelect" id="searchSelect">
+        <option value="blog">블로그</option>
+        <option value="user">유저</option>
+      </select>
+      <input
+        type="text"
+        className={className}
+        placeholder="검색어를 입력하세요."
+      />
       <div className="icon-box">
-        <IoSearchSharp size={size} onClick={onButtonClick}/>
+        <IoSearchSharp size={size} onClick={onButtonClick} />
       </div>
     </div>
   );
-}
-
+};
 
 export { Input, SearchInput };
-
