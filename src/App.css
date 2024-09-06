@@ -1,3 +1,102 @@
 .App {
-  background: radial-gradient(circle at center 5%, rgba(24, 68, 84, 1) 0%, rgba(27, 40, 56, 1)  35%) no-repeat, center;
+  background: radial-gradient(
+        circle at center 5%,
+        rgba(24, 68, 84, 1) 0%,
+        rgba(27, 40, 56, 1) 35%
+      )
+      no-repeat,
+    center;
+}
+
+.blue-large-full-button {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgb(6, 191, 255, 1) 0%,
+    rgb(45, 115, 255, 1) 100%
+  );
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  cursor: pointer;
+}
+
+.blue-large-full-button:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(6, 191, 255, 0.85) 0%,
+    rgb(45, 115, 255, 0.85) 100%
+  );
+}
+
+.icon-box {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box-small {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box-large {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button {
+  border-radius: 50% 50%;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+
+.eye-light-off-icon {
+  background-image: url(assets/image/eye-light-off.png);
+  filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(320deg)
+    brightness(105%) contrast(101%);
+}
+
+.eye-light-on-icon {
+  background-image: url(assets/image/eye-light-on.png);
+  filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(320deg)
+    brightness(105%) contrast(101%);
+}
+
+.expand-right-light-icon {
+  background-image: url(assets/image/expand-right-light.png);
+  filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(320deg)
+    brightness(105%) contrast(101%);
 }
