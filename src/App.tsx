@@ -1,7 +1,6 @@
 import { AUTH_PATH, MAIN_PATH } from 'constants/index'
 import Container from 'layouts/Container'
-import { Main } from 'pages'
-import Auth from 'pages/Auth'
+import { Auth, Main } from 'pages'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 
