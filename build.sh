@@ -2,4 +2,4 @@
 cd ../
 mkdir output
 cp -R ./Front/* ./output
-cp -R ./output ./Front/
+cp -R ./output ./Front/ 
