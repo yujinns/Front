@@ -1,0 +1,86 @@
+#select {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1280px;
+  gap: 60px;
+}
+
+.select-game-block {
+  width: 200px;
+  height: 300px;
+  filter: grayscale(100%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.select-game-block img {
+  width: 100%;
+  height: 100%;
+}
+
+.select-game-block:hover {
+  filter: grayscale(0%);
+  scale: 1.05;
+  cursor: pointer;
+}
+
+#select-modal {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.select-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: auto;
+  background: rgba(27, 40, 56, 1) 35%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.select-modal-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.select-modal-image {
+  width: 210px;
+  height: 310px;
+  margin-bottom: 20px;
+}
+
+.select-modal-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.select-modal-cancle {
+  margin-top: 20px;
+  cursor: pointer;
+  color: rgba(220, 222, 223, 0.7);
+}
+
+.select-modal-cancle:hover {
+  color: rgba(220, 222, 223, 1);
+}

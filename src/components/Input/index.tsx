@@ -4,7 +4,7 @@ import "./style.css";
 
 // interface: Input 컴포넌트 //
 interface Props {
-  label: string;
+  label?: string;
   type: "text" | "password";
   error: boolean;
   placeholder: string;
