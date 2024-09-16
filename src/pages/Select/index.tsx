@@ -6,22 +6,27 @@ import "./style.css";
 export default function Select() {
   const [modal, setModal] = useState<boolean>(false);
   const [gameInfo, setGameInfo] = useState({ gameName: "", gameImage: "" });
+  const [blogName, setBlogName] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
+  const [isBlogNameError, setIsBlogNameError] = useState<boolean>(false);
+  const [blogNameErrorMessage, setBlogNameErrorMessage] = useState<string>("");
   const modalRef = useRef<HTMLDivElement>(null);
 
   const onClickSelectGameHandler = (gameName: string, gameImage: string) => {
     setModal(true);
     setGameInfo({ gameName: gameName, gameImage: gameImage });
   };
-  const [blogName, setBlogName] = useState<string>("");
 
   const onClickCancleHander = () => {
     setModal(false);
     setBlogName("");
   };
 
-  const onChangeBlogNameHandler = (e: ChangeEvent<HTMLInputElement>): void => {
-    e.preventDefault();
-    setBlogName(e.target.value);
+  const onBlogNameChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setBlogName(value);
+    setIsBlogNameError(false);
+    setBlogNameErrorMessage("");
   };
 
   const onClickModalOutside = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -32,7 +37,12 @@ export default function Select() {
   };
 
   const onCreateBlogButtonClickHandler = () => {
-    alert("블로그 생성 완료");
+    if (blogName.length < 1) {
+      setIsBlogNameError(true);
+      setBlogNameErrorMessage("블로그 이름을 입력해주세요.");
+    } else {
+      alert("블로그 생성 완료");
+    }
   };
 
   return (
@@ -60,9 +70,10 @@ export default function Select() {
                   <Input
                     placeholder="블로그 이름"
                     type={"text"}
-                    error={false}
+                    error={isBlogNameError}
+                    message={blogNameErrorMessage}
                     value={blogName}
-                    onChange={onChangeBlogNameHandler}
+                    onChange={onBlogNameChangeHandler}
                   />
                 </div>
                 <div
