@@ -19,6 +19,8 @@ export default function Select() {
   const onClickCancleHander = () => {
     setModal(false);
     setBlogName("");
+    setIsBlogNameError(false);
+    setBlogNameErrorMessage("");
   };
 
   const onBlogNameChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -32,6 +34,8 @@ export default function Select() {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
       setModal(false);
       setBlogName("");
+      setIsBlogNameError(false);
+      setBlogNameErrorMessage("");
     }
   };
 
