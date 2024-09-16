@@ -7,7 +7,6 @@ export default function Select() {
   const [modal, setModal] = useState<boolean>(false);
   const [gameInfo, setGameInfo] = useState({ gameName: "", gameImage: "" });
   const [blogName, setBlogName] = useState<string>("");
-  const [error, setError] = useState<boolean>(false);
   const [isBlogNameError, setIsBlogNameError] = useState<boolean>(false);
   const [blogNameErrorMessage, setBlogNameErrorMessage] = useState<string>("");
   const modalRef = useRef<HTMLDivElement>(null);
